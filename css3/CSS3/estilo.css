@@ -1,0 +1,78 @@
+/* SOMBRAS */
+#box{
+	width: 300px;
+	height: 300px;
+	margin: 50px auto;
+	padding: 8px;
+	background: #009670;
+	/*box-shadow: 10px 10px 2px 2px black;*/
+		box-shadow: 10px 10px 2px black, -10px -10px 2px red;
+}
+
+#box h1{
+	color: #FFF;
+	font-size: 60px;
+	/*text-shadow: 20px 20px 10px black;*/
+	/*text-shadow: 20px 20px rgba(0,0,0,0.5);*/
+	text-shadow: 4px 4px black;
+}
+
+
+/
+/* DEGRADÊ
+#box{
+	width: 300px;
+	height: 300px;
+	background: linear-gradient(to left, 80deg, red, yellow);
+	background: radial-gradient(red, yellow, red, yellow);
+}*/
+
+/***************
+Animações*/
+
+/* Criar animação*/
+@keyframes animacao-box{
+
+	from {background: red; 
+		border-radius: 0px; 
+		top: 0; 
+		left: 0
+	}
+	top {background: yellow;
+		 border-radius: 300px; 
+		 top: 200px; 
+		 left: 200px
+	}
+
+}
+
+#box-animation{
+	width: 300px;
+	height: 300px;
+	background: green;
+	position: relative;
+
+	/*animation-name: animacao-box;
+	animation-duration: 5s;
+	animation-delay: 3s;
+	animation-iteration-count: 2;
+	animation-direction: alternate;*/
+
+	animation: animacao-box 5s 3s 2 alternate;	
+}
+
+/***************************
+Transições*/
+
+#box-transicao{
+	width: 300px;
+	height: 300px;
+	background: orange;
+}
+
+#box-transicao:hover{
+	width: 400px;
+	background: black;
+	/*transition: background 3s, width 8s;*/
+	transition: all 2s;
+}
